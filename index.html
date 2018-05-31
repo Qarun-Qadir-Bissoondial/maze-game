@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2D MAZE GAME</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> </link>
+    <link rel="stylesheet" href= "css/game.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body onload = "Game_start()">
+    <div class = "fluid-container">
+        <h1 class = "text-primary text-center" >University Maze</h1> <h3 class = "text-primary text-center" id = "showscore"> </h3>
+        <div class = "row">
+            <div class = "col-md-2 text-center">
+                <div class="well">
+                     <p>Spawn here =></p>
+                     <p> Timer: </p>
+                     <p id = "time"></p>
+                     <p> Current scores </p>
+                     <p id = "display"> </p>
+                </div>
+                 
+            </div>
+            <div class="col-md-7 text-center">
+                <canvas id='mazeCanvas' width='800' height='800'></canvas>
+            </div>
+            <div class="col-md-3 well text-center" id = "instr">
+                <h1> Story </h1>
+                <p>
+                    You are a sleep-deprived student attending university and it is your goal to obtain a 4.0 GPA. But be warned!
+                    Lecturers, assignments and deadline lurk around the corner, and final exams aren't helping either. Can you 
+                    obtain the grade you desperately desire???
+                </p>
+                <p>---------------------------</p>
+                <h1> Instructions </h1>
+                <div class="text-left">
+                <ul>
+                    <li> Reach middle of maze in under 3:00 </li>
+                    <li> Keys: W - up || S - down || A - left || D - right || Esc - pause </li>
+                    <li> Death by enemy, bomb or holes will cause a respawn </li>
+                    <li> Death: -150 points <br> Disarm bombs (bottom right): +500 points</li>
+                </ul>
+                    
+                </div>
+                    
+            </div>
+        </div>
+            
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCkVze6RYTaq8jI1W_z4YnIwgsMQehz-f4",
+        authDomain: "university-maze-game.firebaseapp.com",
+        databaseURL: "https://university-maze-game.firebaseio.com",
+        projectId: "university-maze-game",
+        storageBucket: "university-maze-game.appspot.com",
+        messagingSenderId: "1011098646409"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src = "js/timer.js"></script>
+    <script src = "js/main.js"></script>
+</body>
+</html>
+  

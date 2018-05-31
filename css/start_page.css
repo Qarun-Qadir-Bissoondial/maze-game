@@ -1,0 +1,49 @@
+html, body {
+	height: 100%;
+	text-align: center;
+	background-image: url("../img/maze_background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#menu{
+	display: inline-block;
+	width: 50%;
+	border: 1px solid black;
+	border-radius: 15px;
+	padding: 5px;
+	background-color: rgba(4, 4, 4, 0.3);
+	position: absolute;
+	margin: auto;
+	top: 20%; left: 0; bottom: 20%; right: 0;
+}
+
+#menu h2 {
+	display: inline-block; 
+	background-color: rgba(4, 4, 4, 0.5);
+	padding: 5px;
+	border-radius: 5px;
+	color: lightblue;
+}
+
+#menu #choice {
+	position: absolute;
+	top: 20%; left: 20%; bottom: 20%; right: 20%;
+}
+
+#menu button {
+	margin-top: 10%;
+	border-radius: 10px;
+/*	background-color: rgba(255, 140, 140, 0.85);*/
+	width: 100%;
+}
+
+#menu button:hover { background-color: rgb(209, 96, 96); }
+
+#start { background-color: lightgreen; }
+#score { background-color: yellow; }
+#instr { background-color: cyan; }
+#exit { background-color: red; }
+
+
+

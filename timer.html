@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#time {
+  text-align: center;
+  font-size: 50px;
+}
+</style>
+</head>
+<body>
+
+<div id="time"></div>
+
+<script>
+    var secs = 600, //you can add in whatever time here by the secs
+            interval,
+            element = document.getElementById("time");
+        
+        function ticToc()
+        {
+            var remMins = Math.floor(secs / 60);
+            var remSecs = secs % 60;
+
+            if (remSecs < 10)
+                remSecs = "0" + remSecs;
+            if (remMins < 10)
+                remMins = "0" + remMins;
+                
+            element.innerHTML = remMins + ":" + remSecs;
+            secs --;
+            
+            if (secs < 0)
+            {
+                element.innerHTML = "Time's up! Go Sleep :3";
+                clearInterval(interval);
+            }
+        }
+        interval = setInterval(ticToc, 1000);
+</script>
+
+</body>
+</html>
